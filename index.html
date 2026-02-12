@@ -226,7 +226,7 @@
       .orb, .cta::after, .pulse{animation:none}
       .reveal{opacity:1; transform:none}
     }
-  </style>
+  /* Bouton fixe mobile */ .sticky-cta{ display:none; }  @media (max-width: 768px){   .sticky-cta{     display:flex;     position:fixed;     bottom:0;     left:0;     width:100%;     justify-content:center;     padding:12px;     background:rgba(7,11,20,.95);     backdrop-filter:blur(8px);     border-top:1px solid rgba(255,255,255,.1);     z-index:999;   }   .sticky-cta a{     width:90%;     text-align:center;     padding:14px;     border-radius:999px;     background:linear-gradient(135deg,#d7b35c,#f0cf7a);     color:#111;     font-weight:800;     text-decoration:none;     box-shadow:0 8px 20px rgba(215,179,92,.3);   } }
 </head>
 
 <body>
@@ -426,7 +426,7 @@
             <div class="mini" style="margin-top:14px">
               <a class="btn2" href="tel:+33616355059">📞 Appeler</a>
               <a class="btn2" href="mailto:sophro.be.move.energy@gmail.com?subject=Demande%20de%20contact%20—%20Sophro%20Be%20Move%20Energy">✉️ Email</a>
-              <a class="btn2" href="https://www.instagram.com/bemoveenergy/" target="_blank" rel="noopener">Instagram</a>
+              <a class="btn2" href="https://www.<a class="btn2" href="https://instagram.com/sophro.be.move" target="_blank" rel="noopener noreferrer">Instagram</a>.com/bemoveenergy/" target="_blank" rel="noopener">Instagram</a>
             </div>
             <p class="small" style="margin-top:12px"><em>Zone d’intervention : Île-de-France (déplacements possibles selon le projet).</em></p>
           </div>
@@ -489,5 +489,6 @@
       els.forEach(el=>io.observe(el));
     })();
   </script>
-</body>
+<div class="sticky-cta">   <a href="#contact">📩 Demander un devis</a> </div>
 </html>
+
