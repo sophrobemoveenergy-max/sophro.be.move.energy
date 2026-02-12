@@ -1,495 +1,208 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sophro Be Move Energy — Coaching • Bien-être • Parentalité • Petite enfance (0–6 ans)</title>
-  <meta name="description" content="Sophro Be Move Energy : coaching, sophrologie, bien-être. Interventions : Secteur privé | Établissements scolaires | Collectivités territoriales | Administration pénitentiaire | Structures du vieillissement.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sophro Be Move Energy</title>
 
-  <style>
-    :root{
-      --bg:#070b14;
-      --card: rgba(17,27,46,.72);
-      --text:#eaf0ff;
-      --muted:#b7c3e6;
-      --accent:#d7b35c;
-      --accent2:#6badff;
-      --line:rgba(255,255,255,.12);
-      --shadow: 0 18px 45px rgba(0,0,0,.40);
-      --radius: 20px;
-      --max: 1120px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial; background: var(--bg); color:var(--text)}
-    a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding: 22px 18px 74px; position:relative}
+<style>
+:root{
+  --bg:#0f172a;
+  --card:#1e293b;
+  --gold:#d7b35c;
+  --text:#f1f5f9;
+  --muted:#94a3b8;
+}
 
-    /* animated background */
-    .bg{
-      position:fixed; inset:-40px; z-index:-2;
-      background:
-        radial-gradient(900px 650px at 15% 10%, rgba(215,179,92,.14), transparent 60%),
-        radial-gradient(900px 650px at 85% 15%, rgba(107,173,255,.12), transparent 55%),
-        radial-gradient(900px 700px at 50% 95%, rgba(215,179,92,.10), transparent 60%),
-        linear-gradient(180deg, #070b14 0%, #060913 60%, #070b14 100%);
-      filter: saturate(1.05);
-    }
-    .grain{
-      position:fixed; inset:0; z-index:-1; pointer-events:none;
-      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
-      mix-blend-mode: overlay;
-      opacity:.35;
-    }
-    .orb{
-      position:fixed; width:520px; height:520px; border-radius:50%;
-      background: radial-gradient(circle at 30% 30%, rgba(215,179,92,.55), rgba(215,179,92,.08) 55%, transparent 70%);
-      filter: blur(18px);
-      opacity:.22;
-      z-index:-1;
-      animation: drift 14s ease-in-out infinite;
-    }
-    .orb.o2{
-      width:560px; height:560px;
-      background: radial-gradient(circle at 30% 30%, rgba(107,173,255,.55), rgba(107,173,255,.08) 55%, transparent 70%);
-      animation: drift2 18s ease-in-out infinite;
-      opacity:.18;
-    }
-    @keyframes drift{
-      0%{transform: translate(8vw, 8vh) scale(1)}
-      50%{transform: translate(14vw, 18vh) scale(1.06)}
-      100%{transform: translate(8vw, 8vh) scale(1)}
-    }
-    @keyframes drift2{
-      0%{transform: translate(60vw, 12vh) scale(1)}
-      50%{transform: translate(50vw, 22vh) scale(1.05)}
-      100%{transform: translate(60vw, 12vh) scale(1)}
-    }
+*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto}
 
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:14px 16px; border:1px solid var(--line);
-      background: rgba(10,16,30,.55); backdrop-filter: blur(12px);
-      border-radius: 999px; box-shadow: var(--shadow);
-      position: sticky; top: 12px; z-index: 20;
-    }
-    .brand{display:flex; gap:10px; align-items:center; text-decoration:none}
-    .logo{
-      width:36px; height:36px; border-radius: 14px;
-      background: linear-gradient(135deg, rgba(215,179,92,.95), rgba(107,173,255,.35));
-      display:grid; place-items:center; color:#0d0f16; font-weight:900;
-      box-shadow: 0 14px 30px rgba(215,179,92,.16);
-      transform: translateZ(0);
-    }
-    .brand b{letter-spacing:.2px}
-    .small{font-size: 13px; color: var(--muted)}
-    .nav .links{display:flex; gap:14px; align-items:center}
-    .nav .links a{opacity:.92; text-decoration:none; font-size:14px}
-    .nav .links a:hover{opacity:1; text-decoration:underline}
-    @media (max-width: 900px){ .nav .links{display:none} }
+body{
+  background:linear-gradient(180deg,#0f172a,#111827);
+  color:var(--text);
+  line-height:1.6;
+}
 
-    .cta{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:10px 14px; border-radius: 999px;
-      background: linear-gradient(135deg, rgba(215,179,92,.95), rgba(215,179,92,.62));
-      color:#17120a; text-decoration:none; font-weight:800; border:0;
-      box-shadow: 0 16px 34px rgba(215,179,92,.16);
-      position:relative;
-      overflow:hidden;
-      cursor:pointer;
-    }
-    .cta::after{
-      content:""; position:absolute; inset:-2px;
-      background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.35) 35%, transparent 60%);
-      transform: translateX(-120%);
-      animation: shine 3.2s ease-in-out infinite;
-      opacity:.6;
-    }
-    @keyframes shine{
-      0%{transform: translateX(-120%)}
-      45%{transform: translateX(120%)}
-      100%{transform: translateX(120%)}
-    }
-    .cta:active{transform: translateY(1px)}
+/* Background glow */
+body::before{
+  content:"";
+  position:fixed;
+  width:600px;
+  height:600px;
+  background:radial-gradient(circle,var(--gold),transparent 60%);
+  opacity:.08;
+  top:-200px;
+  left:-200px;
+  z-index:-1;
+}
 
-    .hero{padding: 56px 6px 6px}
-    .grid{display:grid; gap:18px}
-    .heroGrid{grid-template-columns: 1.2fr .8fr; align-items:start}
-    @media (max-width: 600px){ .heroGrid{grid-template-columns:1fr} }
+/* Layout */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:40px 20px 120px;
+}
 
-    .kicker{
-      display:inline-flex; align-items:center; gap:10px;
-      padding: 8px 12px; border-radius: 999px;
-      border:1px solid var(--line);
-      background: rgba(17,27,46,.45);
-      color: var(--muted);
-      font-weight:650; font-size: 13px;
-      width: fit-content;
-    }
-    .pulse{width:9px;height:9px;border-radius:99px;background: var(--accent); box-shadow: 0 0 0 0 rgba(215,179,92,.35); animation:pulse 1.8s infinite}
-    @keyframes pulse{
-      0%{box-shadow:0 0 0 0 rgba(215,179,92,.35)}
-      70%{box-shadow:0 0 0 14px rgba(215,179,92,0)}
-      100%{box-shadow:0 0 0 0 rgba(215,179,92,0)}
-    }
+/* Header */
+header{
+  text-align:center;
+  margin-bottom:60px;
+}
 
-    .h1{font-size: clamp(32px, 4.1vw, 54px); line-height:1.05; margin:12px 0 12px}
-    .sub{font-size: clamp(15px, 1.3vw, 18px); color:var(--muted); max-width: 62ch; margin:0 0 20px}
+h1{
+  font-size:clamp(32px,5vw,48px);
+  margin-bottom:15px;
+}
 
-    .pillRow{display:flex; flex-wrap:wrap; gap:10px; margin:6px 0 14px}
-    .pill{
-      border:1px solid var(--line);
-      background: rgba(17,27,46,.55);
-      padding:8px 10px; border-radius:999px; font-size:13px; opacity:.95;
-      transition: transform .15s ease, background .15s ease;
-      display:inline-block;
-    }
-    .pill:hover{transform: translateY(-1px); background: rgba(255,255,255,.05)}
+.subtitle{
+  color:var(--muted);
+  max-width:600px;
+  margin:auto;
+}
 
-    .axis{
-      margin-top: 10px;
-      font-weight: 800;
-      letter-spacing: .16em;
-      font-size: 12px;
-      opacity: .78;
-    }
-    .axis-result{ margin-top: 10px; opacity: .9; }
+/* Avatar decor */
+.avatar{
+  width:180px;
+  height:180px;
+  margin:40px auto;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),#f0cf7a);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:60px;
+  font-weight:bold;
+  color:#111;
+  box-shadow:0 15px 40px rgba(215,179,92,.3);
+}
 
-    .card{
-      border:1px solid var(--line);
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 18px;
-      transform: translateZ(0);
-    }
-    .card h3{margin:0 0 10px; font-size:16px; letter-spacing:.2px}
-    .card p{margin:0; color:var(--muted); line-height:1.55}
-    .card .mini{margin-top:12px; display:flex; gap:10px; flex-wrap:wrap}
+/* Sections */
+section{
+  margin-bottom:60px;
+}
 
-    .badge{
-      display:inline-flex; align-items:center; gap:8px; padding: 8px 10px;
-      border-radius: 999px; border:1px solid var(--line);
-      background: rgba(17,27,46,.52);
-      color: var(--muted);
-      font-size: 13px;
-    }
-    .dot{width:8px;height:8px;border-radius:99px;background: var(--accent2); box-shadow: 0 0 0 4px rgba(107,173,255,.16)}
+.card{
+  background:var(--card);
+  padding:25px;
+  border-radius:20px;
+  margin-bottom:20px;
+}
 
-    .btn2{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 12px; border-radius: 14px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      text-decoration:none; font-weight:750; font-size:14px;
-      transition: transform .15s ease, background .15s ease;
-    }
-    .btn2:hover{background: rgba(255,255,255,.06); transform: translateY(-1px)}
-    section{padding: 34px 6px 0}
-    .sectionTitle{font-size:20px; margin:0 0 14px}
-    .cols3{grid-template-columns: repeat(3, 1fr)}
-    @media (max-width: 900px){ .cols3{grid-template-columns:1fr} }
+.card h3{
+  margin-bottom:10px;
+  color:var(--gold);
+}
 
-    .list{margin:10px 0 0; padding-left: 18px; color: var(--muted); line-height:1.6}
+/* Buttons */
+.btn{
+  display:inline-block;
+  padding:12px 18px;
+  border-radius:30px;
+  background:var(--gold);
+  color:#111;
+  font-weight:bold;
+  text-decoration:none;
+  margin:8px 5px 0 0;
+}
 
-    .quote{
-      border:1px solid rgba(215,179,92,.22);
-      padding: 14px 14px 14px 16px;
-      background: linear-gradient(135deg, rgba(215,179,92,.10), rgba(107,173,255,.06));
-      border-radius: 16px;
-      color: var(--text);
-    }
+.btn-outline{
+  border:1px solid var(--gold);
+  padding:10px 16px;
+  border-radius:30px;
+  text-decoration:none;
+  color:var(--gold);
+}
 
-    .form{display:grid; gap:12px; margin-top: 10px}
-    input, textarea{
-      width:100%; padding:12px 12px; border-radius: 14px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      color: var(--text);
-      outline: none;
-    }
-    input::placeholder, textarea::placeholder{color: rgba(183,195,230,.7)}
-    textarea{min-height: 120px; resize: vertical}
+/* Contact */
+.contact{
+  text-align:center;
+}
 
-    .foot{
-      margin-top: 44px;
-      padding-top: 18px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center;
-      font-size: 13px;
-    }
+footer{
+  text-align:center;
+  margin-top:40px;
+  color:var(--muted);
+  font-size:14px;
+}
 
-    /* scroll reveal (light) */
-    /* scroll reveal (safe) */ .reveal{opacity:1; transform:none} .reveal.on{opacity:1; transform:none}; transform: translateY(10px); transition: opacity .6s ease, transform .6s ease}
-    .reveal.on{opacity:1; transform: translateY(0)}
-    @media (prefers-reduced-motion: reduce){
-      .orb, .cta::after, .pulse{animation:none}
-      .reveal{opacity:1; transform:none}
-    }
-  /* Bouton fixe mobile */ .sticky-cta{ display:none; }  @media (max-width: 768px){   .sticky-cta{     display:flex;     position:fixed;     bottom:0;     left:0;     width:100%;     justify-content:center;     padding:12px;     background:rgba(7,11,20,.95);     backdrop-filter:blur(8px);     border-top:1px solid rgba(255,255,255,.1);     z-index:999;   }   .sticky-cta a{     width:90%;     text-align:center;     padding:14px;     border-radius:999px;     background:linear-gradient(135deg,#d7b35c,#f0cf7a);     color:#111;     font-weight:800;     text-decoration:none;     box-shadow:0 8px 20px rgba(215,179,92,.3);   } }
+/* Sticky mobile button */
+.sticky{
+  display:none;
+}
+
+@media(max-width:768px){
+  .sticky{
+    display:block;
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:#111827;
+    padding:15px;
+    text-align:center;
+    border-top:1px solid #1f2937;
+  }
+  .sticky a{
+    background:var(--gold);
+    color:#111;
+    padding:14px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    display:inline-block;
+    width:90%;
+  }
+}
+</style>
 </head>
 
 <body>
-  <div class="bg"></div>
-  <div class="grain"></div>
-  <div class="orb"></div>
-  <div class="orb o2"></div>
 
-  <div class="wrap">
-    <header class="nav" aria-label="Navigation">
-      <a class="brand" href="#top">
-        <span class="logo">B</span>
-        <span>
-          <b>Sophro Be Move Energy</b><br>
-          <span class="small">Coaching • Bien-être • Parentalité • Petite enfance (0–6 ans)</span>
-        </span>
-      </a>
+<div class="container">
 
-      <nav class="links" aria-label="Sections">
-        <a href="#services">Services</a>
-        <a href="#publics">Publics</a>
-        <a href="#methodes">Méthodes</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<header>
+  <h1>Apaiser. Ajuster. Transformer.</h1>
+  <p class="subtitle">
+    Sophrologie appliquée aux contextes éducatifs, institutionnels et professionnels.
+  </p>
+</header>
 
-      <a class="cta" href="#contact">Me contacter</a>
-    </header>
+<div class="avatar">B</div>
 
-    <main id="top">
-      <section class="hero">
-        <div class="kicker reveal"><span class="pulse"></span> Approche concrète • pratiques simples • cadre progressif</div>
-
-        <div class="grid heroGrid" style="margin-top:14px">
-
-          <!-- COLONNE GAUCHE -->
-          <div class="reveal">
-            <h1 class="h1">Apaiser. Ajuster. Transformer.</h1>
-            <p class="sub">
-              La sophrologie comme approche corporelle et consciente pour réguler, apaiser et structurer les dynamiques humaines, dans tous les contextes de vie.
-            </p>
-
-            <div class="axis">CORPS</div>
-            <div class="pillRow" aria-label="Piliers corps">
-              <span class="pill">Respiration & ancrage</span>
-              <span class="pill">Mouvement & présence</span>
-            </div>
-
-            <div class="axis">ÉMOTION</div>
-            <div class="pillRow" aria-label="Piliers émotion">
-              <span class="pill">Régulation émotionnelle</span>
-            </div>
-
-            <div class="axis">LIEN</div>
-            <div class="pillRow" aria-label="Piliers lien">
-              <span class="pill">Qualité relationnelle</span>
-            </div>
-
-            <div class="axis axis-result">TRANSFORMATION</div>
-
-            <div class="grid" style="grid-template-columns: 1fr 1fr; gap:12px; margin-top:14px">
-              <a class="btn2" href="#services">Voir les prestations</a>
-              <a class="btn2" href="#contact">Demander un devis</a>
-            </div>
-          </div>
-
-          <!-- COLONNE DROITE -->
-          <aside class="card reveal">
-            <h3>Une approche concrète et progressive</h3>
-
-            <p>
-              Des pratiques corporelles simples, intégrables dans le quotidien professionnel,
-              au service de l’apaisement, de la régulation et de la cohésion des collectifs.
-            </p>
-
-            <p class="small" style="margin-top:14px">
-              <strong>Champs d’intervention</strong><br>
-              Secteur privé · Établissements scolaires · Collectivités territoriales · Administration pénitentiaire · Structures du vieillissement
-            </p>
-
-            <div class="mini">
-              <span class="badge"><span class="dot"></span> Séances collectives</span>
-              <span class="badge"><span class="dot"></span> Accompagnement individuel</span>
-              <span class="badge"><span class="dot"></span> Ateliers parents</span>
-              <span class="badge"><span class="dot"></span> Formation des équipes</span>
-            </div>
-
-            <div class="mini" style="margin-top:14px">
-              <a class="btn2" href="#methodes">Découvrir l’approche</a>
-              <a class="btn2" href="#publics">Découvrir les publics</a>
-            </div>
-          </aside>
-
-        </div>
-      </section>
-
-      <section id="services">
-        <h2 class="sectionTitle reveal">Services</h2>
-        <div class="grid cols3">
-          <div class="card reveal">
-            <h3>Ateliers enfants (0–6 ans)</h3>
-            <p>Temps courts de pratique corporelle et respiratoire, pensés pour aider l’enfant à mieux vivre et comprendre son corps et ses émotions, et à s’inscrire progressivement dans le collectif.</p>
-            <ul class="list">
-              <li>Routines de retour au calme (3 à 5 minutes)</li>
-              <li>Expression émotionnelle adaptée</li>
-              <li>Attention, coopération, confiance</li>
-            </ul>
-          </div>
-
-          <div class="card reveal">
-            <h3>Soutien à la parentalité</h3>
-            <p>Un accompagnement concret et respectueux des réalités familiales, pour aider les parents à poser un cadre sécurisant, réguler les tensions du quotidien et renforcer la qualité du lien, sans culpabilisation.</p>
-            <ul class="list">
-              <li>Cadre éducatif et empathie (compatibles)</li>
-              <li>Fatigue, surcharge, tensions</li>
-              <li>Rituels simples et transférables à la maison</li>
-            </ul>
-          </div>
-
-          <div class="card reveal">
-            <h3>Formation équipes & institutions</h3>
-            <p>Des temps de formation et d’accompagnement pensés pour soutenir les professionnels dans leur posture, prévenir l’épuisement et renforcer la qualité du climat relationnel au sein des équipes.</p>
-            <ul class="list">
-              <li>Régulation émotionnelle en situation professionnelle</li>
-              <li>Prévention du stress et des tensions relationnelles</li>
-              <li>Outils concrets de désamorçage et de communication apaisée</li>
-              <li>Articulation entre cadre, autorité et respect des personnes</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="publics">
-        <h2 class="sectionTitle reveal">Publics</h2>
-        <div class="grid cols3">
-          <div class="card reveal">
-            <h3>Mairie / collectivités</h3>
-            <p>Interventions au service des politiques publiques locales : prévention, qualité de vie au travail, actions éducatives et soutien à la parentalité, en lien avec les services municipaux.</p>
-            <ul class="list">
-              <li>Projets éducatifs et actions de prévention</li>
-              <li>Ateliers parents-enfants</li>
-              <li>Accompagnement des équipes / QVT des agents</li>
-            </ul>
-          </div>
-
-          <div class="card reveal">
-            <h3>Écoles / crèches</h3>
-            <p>Interventions intégrées au cadre éducatif existant, pour soutenir le climat de groupe, la régulation et la qualité relationnelle, avec des outils simples et transférables.</p>
-            <ul class="list">
-              <li>Régulation émotionnelle adaptée à l’âge</li>
-              <li>Appui aux professionnels (posture, cohérence, continuité)</li>
-            </ul>
-            <div class="mini" style="margin-top:14px">
-              <a class="btn2" href="docs/Interventions_de_sophrologie_en_milieu_scolaire.pdf" target="_blank" rel="noopener">
-                Télécharger – Établissements scolaires (PDF)
-              </a>
-              <p class="small" style="margin:8px 0 0">
-                Si le lien ne marche pas : crée un dossier <strong>docs</strong> à la racine du dépôt et mets-y le PDF avec ce nom exact.
-              </p>
-            </div>
-          </div>
-
-          <div class="card reveal">
-            <h3>Entreprises / structures</h3>
-            <p>Accompagnement des professionnels autour de la gestion du stress, de la récupération, de la respiration et de la concentration, dans une logique de prévention de l’épuisement et d’amélioration du climat de travail.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="methodes">
-        <h2 class="sectionTitle reveal">Méthodes & approche</h2>
-        <div class="grid cols3">
-          <div class="card reveal">
-            <h3>Simple</h3>
-            <p>Des pratiques corporelles accessibles, répétées et transférables, permettant à chacun et chacune de développer une conscience de soi sans hiérarchie, sans injonction et sans jugement (<em>epochè</em>), comme un réajustement intérieur.</p>
-          </div>
-          <div class="card reveal">
-            <h3>Progressif</h3>
-            <p>Un accompagnement qui s’inscrit dans le temps, respectueux des rythmes de chacun et de chacune, et orienté vers l’empathie, la compréhension mutuelle et la construction d’un climat humain fondé sur l’égalité et l’équité.</p>
-          </div>
-          <div class="card reveal">
-            <h3>Humain</h3>
-            <p>Permettre à chacun et chacune de vivre ses émotions et ses ressentis, d’être à l’écoute de soi, sans interprétation ni explication imposée ; soutenir une relation d’égal à égal, orientée vers l’autonomie, une transformation progressive de la conscience et l’émergence d’un nouveau regard.</p>
-          </div>
-        </div>
-
-        <div class="quote reveal" style="margin-top:16px">
-          “On n’éteint pas l’émotion. On apprend à la traverser sans violence, puis à retrouver un choix.”
-        </div>
-      </section>
-
-      <section id="contact">
-        <h2 class="sectionTitle reveal">Contact</h2>
-        <div class="grid" style="grid-template-columns: 1fr 1fr; gap:18px">
-          <div class="card reveal">
-            <h3>Me joindre</h3>
-            <p>Dis-moi : public concerné, lieu, objectif, format (atelier, séance ou formation), ainsi que les contraintes éventuelles (horaires, budget).</p>
-            <div class="mini" style="margin-top:14px">
-              <a class="btn2" href="tel:+33616355059">📞 Appeler</a>
-              <a class="btn2" href="mailto:sophro.be.move.energy@gmail.com?subject=Demande%20de%20contact%20—%20Sophro%20Be%20Move%20Energy">✉️ Email</a>
-              <a class="btn2" href="https://www.<a class="btn2" href="https://instagram.com/sophro.be.move" target="_blank" rel="noopener noreferrer">Instagram</a>.com/bemoveenergy/" target="_blank" rel="noopener">Instagram</a>
-            </div>
-            <p class="small" style="margin-top:12px"><em>Zone d’intervention : Île-de-France (déplacements possibles selon le projet).</em></p>
-          </div>
-
-          <div class="card reveal">
-            <h3>Message (copie/colle)</h3>
-            <form class="form" onsubmit="return sendMail(event)">
-              <input id="name" type="text" placeholder="Ton nom / structure" required />
-              <input id="contactInfo" type="text" placeholder="Téléphone ou email" required />
-              <textarea id="message" placeholder="Besoin, public, lieu, format, dates souhaitées…" required></textarea>
-              <button class="cta" type="submit">Envoyer</button>
-              <p class="small">Le bouton ouvre ton application mail (aucune donnée stockée sur le site).</p>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <footer class="foot">
-        <div>© <span id="year"></span> Sophro Be Move Energy — Tous droits réservés.</div>
-        <div>Mentions : site vitrine • pas de cookies • pas de tracking</div>
-      </footer>
-    </main>
+<section>
+  <div class="card">
+    <h3>Ateliers enfants (0–6 ans)</h3>
+    <p>Régulation émotionnelle, attention, coopération et cadre éducatif structurant.</p>
   </div>
 
-  <script>
-    // Year
-    document.getElementById("year").textContent = new Date().getFullYear();
+  <div class="card">
+    <h3>Soutien à la parentalité</h3>
+    <p>Accompagnement concret pour poser un cadre apaisé et renforcer le lien.</p>
+  </div>
 
-    // mailto form
-    function sendMail(e){
-      e.preventDefault();
-      const name = document.getElementById("name").value.trim();
-      const contact = document.getElementById("contactInfo").value.trim();
-      const msg = document.getElementById("message").value.trim();
-      const subject = encodeURIComponent("Demande de contact — Sophro Be Move Energy");
-      const body = encodeURIComponent(
-        "Nom / structure : " + name + "\n" +
-        "Contact : " + contact + "\n\n" +
-        msg
-      );
-      window.location.href = "mailto:sophro.be.move.energy@gmail.com?subject=" + subject + "&body=" + body;
-      return false;
-    }
+  <div class="card">
+    <h3>Formation équipes & institutions</h3>
+    <p>Prévention du stress, posture professionnelle, cohésion des collectifs.</p>
+  </div>
+</section>
 
-    // scroll reveal (avec fallback)
-    (function(){
-      const els = Array.from(document.querySelectorAll(".reveal"));
-      if (!("IntersectionObserver" in window)) {
-        els.forEach(el => el.classList.add("on"));
-        return;
-      }
-      const io = new IntersectionObserver((entries)=>{
-        entries.forEach(en=>{
-          if(en.isIntersecting){
-            en.target.classList.add("on");
-            io.unobserve(en.target);
-          }
-        });
-      }, {threshold: 0.12});
-      els.forEach(el=>io.observe(el));
-    })();
-  </script>
-<div class="sticky-cta">   <a href="#contact">📩 Demander un devis</a> </div>
+<section class="contact" id="contact">
+  <h2>Contact</h2>
+  <p style="margin:15px 0;">Île-de-France — déplacements possibles</p>
+
+  <a class="btn" href="tel:+33616355059">📞 06 16 35 50 59</a>
+  <a class="btn" href="mailto:sophro.be.move.energy@gmail.com">✉️ Email</a>
+  <a class="btn-outline" href="https://instagram.com/sophro.be.move" target="_blank">Instagram</a>
+</section>
+
+<footer>
+  © 2026 Sophro Be Move Energy
+</footer>
+
+</div>
+
+<div class="sticky">
+  <a href="#contact">📩 Demander un devis</a>
+</div>
+
+</body>
 </html>
-
-
