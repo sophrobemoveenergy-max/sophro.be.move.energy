@@ -220,7 +220,7 @@
     }
 
     /* scroll reveal (light) */
-    .reveal{opacity:0; transform: translateY(10px); transition: opacity .6s ease, transform .6s ease}
+    /* scroll reveal (safe) */ .reveal{opacity:1; transform:none} .reveal.on{opacity:1; transform:none}; transform: translateY(10px); transition: opacity .6s ease, transform .6s ease}
     .reveal.on{opacity:1; transform: translateY(0)}
     @media (prefers-reduced-motion: reduce){
       .orb, .cta::after, .pulse{animation:none}
@@ -491,4 +491,5 @@
   </script>
 <div class="sticky-cta">   <a href="#contact">📩 Demander un devis</a> </div>
 </html>
+
 
